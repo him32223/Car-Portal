@@ -1,0 +1,21 @@
+How to Run
+
+#step 1
+CREATE SCHEMA `springboot_carportal_db` DEFAULT CHARACTER SET utf8 ;
+
+#step 2 
+Run Springboot application
+
+#step 3 - insert data into Role Table
+INSERT INTO `springboot_carportal_db`.`role` (`id`, `description`, `name`) VALUES ('1', 'for admin', 'Administrator');
+INSERT INTO `springboot_carportal_db`.`role` (`id`, `description`, `name`) VALUES ('2', 'for user', 'Users');
+
+
+#step 4 - insert data into Car User Table
+INSERT INTO `springboot_carportal_db`.`car_user` (`id`, `name`, `password`, `user_name`) VALUES ('1', 'admin', 'admin', 'admin');
+
+#step 5 - insert into user_role Table for admin 
+INSERT INTO `springboot_carportal_db`.`user_role` (`user_id`, `role_id`) VALUES ('1', '1');
+
+#step 6 - Run On Browser
+http://localhost:8080/
